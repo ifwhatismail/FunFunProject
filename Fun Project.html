@@ -3,7 +3,12 @@
     #appreciate {
         display: none;
     }
-    img {
+    .firstcat {
+        display: none;
+        cursor: pointer;
+    }
+
+    .secondcat {
         display: none;
     }
 
@@ -35,7 +40,8 @@
         <br><br>
     
         <h2 id="appreciate">YAYYYY! Love you baby </h2>
-        <img id="img" src="cat.jpg">
+        <img class="firstcat" onclick="clickme()" id="img1" src="cat.jpg">
+        <img id="img2" class="secondcat" src="catgif.gif" >
     </center>
 </body>
 
@@ -44,11 +50,18 @@
 
     function yes() {
         document.getElementById("appreciate").style.display = "block";
-        document.getElementById("img").style.display = "block";
+        document.getElementById("img1").style.display = "block";
+        document.getElementById("img2").style.display = "none";
+
     }
 
     function no(){
         document.getElementById("no").style.display = "none";
+    }
+
+    function clickme() {
+        document.getElementById("img1").style.display = "none";
+        document.getElementById("img2").style.display = "block";
     }
 
 </script>
